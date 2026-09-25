@@ -5,3 +5,4 @@ orders_data.json
 .env
 .env.*
 !.env.example
+.vercel/

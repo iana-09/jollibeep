@@ -1,5 +1,5 @@
 <?php
-include 'db_connection.php';
+require_once 'db_connection.php';
 session_start();
 
 // If POST request and no session yet, process the registration

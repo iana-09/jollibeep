@@ -49,3 +49,11 @@ create index if not exists orders_created_at_idx on public.orders (created_at de
 -- blocked unless you later add Supabase Auth and explicit policies.
 alter table public.users enable row level security;
 alter table public.orders enable row level security;
+create table if not exists public.app_sessions (
+    session_id text primary key,
+    payload text not null,
+    updated_at timestamptz not null default now()
+);
+
+create index if not exists app_sessions_updated_at_idx on public.app_sessions (updated_at);
+alter table public.app_sessions enable row level security;
