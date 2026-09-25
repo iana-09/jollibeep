@@ -1,0 +1,3 @@
+supabase_config.php
+users_mysql_export.sql
+*.log

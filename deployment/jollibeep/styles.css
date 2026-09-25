@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    padding: 20px;
+}
+h1 {
+    color: #b00000;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #b00000;
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    background: #b00000;
+    color: white;
+}
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+input, select {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+}
