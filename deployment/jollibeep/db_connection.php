@@ -182,6 +182,16 @@ class PgCompatConnection
         }
     }
 
+    public function close(): bool
+    {
+        if ($this->pdo === null) {
+            return false;
+        }
+
+        $this->pdo = null;
+        return true;
+    }
+
     public function getPdo(): PDO
     {
         return $this->pdo;
