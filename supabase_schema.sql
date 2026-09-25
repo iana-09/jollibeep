@@ -45,7 +45,7 @@ create index if not exists orders_store_name_idx on public.orders (store_name);
 create index if not exists orders_status_idx on public.orders (status);
 create index if not exists orders_created_at_idx on public.orders (created_at desc);
 
--- This app uses its own PHP login, so keep Row Level Security off unless
--- you later add Supabase Auth and policies.
-alter table public.users disable row level security;
-alter table public.orders disable row level security;
+-- PHP connects server-side with database credentials. Keep API access
+-- blocked unless you later add Supabase Auth and explicit policies.
+alter table public.users enable row level security;
+alter table public.orders enable row level security;
